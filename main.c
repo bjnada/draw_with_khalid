@@ -1,9 +1,4 @@
-#include <unistd.h>
-
-void nada_putchar(char c)
-{
-	write(1,&c,1);
-}
+#include <stdio.h>
 
 int main(void)
 {
@@ -19,32 +14,32 @@ int main(void)
 		{
 			while(col <= 11)
 			{
-				nada_putchar('-');
+				putchar('-');
 				if (col != 11)
-					nada_putchar(' ');
+					putchar(' ');
 				col++;
 			}
-			nada_putchar('\n');
+			putchar('\n');
 		}
 		col = 0;
 		if (row < 10)
 		{
-			nada_putchar('|');
-			nada_putchar(' ');
+			putchar('|');
+			putchar(' ');
 		}
 		while (col < 10 && row != 10)
 		{
-			nada_putchar(c);
+			putchar(c);
 			if (col != 9)
-				nada_putchar(' ');
+				putchar(' ');
 			col++;
 		}
 		if (row < 10)
 		{
-			nada_putchar(' ');
-			nada_putchar('|');
+			putchar(' ');
+			putchar('|');
 		}
-		nada_putchar('\n');
+		putchar('\n');
 		row++;
 	}
 	return (0);
